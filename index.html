@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indecisive's Paradise</title>
+  <meta property="og:description" content="Personal Website" />
+  <meta property="og:url" content="https://nautilus-mc.com" />
+  <meta property="og:image" content="https://imgur.com/a/w1yi0Nk" />
+  <meta property="twitter:image" content="https://imgur.com/a/w1yi0Nk" />
+  <meta name="twitter:card" content="k.jpg" />
+  <meta name="twitter:title" content="Indecisive's Personal Website" />
+  <meta name="twitter:description" content="Indecisive's Personal Website" />
+
+  <link rel="icon" href="assets/images/k.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/card.css">
+  <link rel="stylesheet" href="assets/css/test.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+</head>
+
+<body>
+  <script>
+function startExperience() {
+  var overlay = document.getElementById("overlay");
+  var audio = document.getElementById("audio");
+
+  // Set up a transition for a smooth fade-out effect
+  overlay.style.transition = "opacity 1s";
+
+  // Reduce opacity to 0
+  overlay.style.opacity = 0;
+
+  // After the fade-out, remove the overlay from the DOM
+  setTimeout(function() {
+    overlay.remove();
+  }, 800); // Adjust the time based on your transition duration
+
+  // Adjust audio settings or perform other actions as needed
+  audio.volume = 0.1;
+  audio.play();
+}
+  </script>
+
+<!-- Uncomment the input with the id overlay-toggle -->
+<input type="checkbox" id="overlay-toggle">
+
+<div id="overlay" class="overlay fullscreen">
+  <!-- Associate the label with the correct input id -->
+  <label for="overlay-toggle" onclick="startExperience()">
+    <span class="hover" style="font-family: mono; font-size: 1em;">Click to enter!</span>
+  </label>
+</div>
+
+
+  <audio loop="" preload="auto" id="audio">
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+
+  <div id="loading">
+    <div></div>
+  </div>
+
+  <div id="wrapper">
+    <div id="card">
+      <div id="banner" style="background-image: url(https://imgur.com/1cUExy7.png);"></div>
+      <div id="user-info">
+        <div id="avatar">
+          <img src="YOUR-AVATAR-URL" alt="Indecisive's Avatar">
+          <div id="status"></div>
+        </div>
+        <!--===== BADGES =====-->
+
+        <div id="badges">
+        </div>
+        <!--===== NAME =====-->
+
+        <div id="username">change if you want<span>#0000</span></div>
+      </div>
+      <hr />
+
+      <!--===== ABOUT ME =====-->
+
+      <div id="about">
+        <h4>About me</h4>
+        <p><u>𝐌𝐲 𝐒𝐞𝐫𝐯𝐞𝐫:</u></p>
+        <p><a href="https://discord.gg/yaC3HJrSuy" target="_blank">https://discord.gg/yaC3HJrSuy</a></p>
+      </div>
+
+      <!--===== SOCIAL =====-->
+
+      <div id="social">
+        <p style="font-size: 22px;">My Socials:&nbsp;</p>
+        <a class="social-link" href="https://discord.gg/yaC3HJrSuy" target="_blank">
+          <img src="assets/images/discord.png" alt="Discord" />
+        </a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script src="assets/js/socket.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
